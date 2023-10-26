@@ -11,8 +11,14 @@ app.get('/', (req, res) => {
   res.render('Home')
 })
 
+// GET /places
+app.get('/', (req, res) => {
+  res.render('places/index')
+})
+
 app.get('*', (req, res) => {
   res.render('error404')
 })
+
 
 app.listen(process.env.PORT)
